@@ -1,0 +1,42 @@
+import random
+i = 1
+dict = {"s":"snake","w":"water","g":"gun"}
+comp = random.choice(["snake","water","gun"])
+mine = input("s,w or g")
+# if mine != s or mine != g or mine != w:
+#     print("invalid input")
+i = 1
+while i <= 10:
+    if comp == "snake":
+        if mine == "w":
+            print("you loose")
+            break
+        elif mine == "g":
+            print("you win")
+            break
+        elif mine == "s":
+            print("draw")
+            break
+    elif comp == "water":
+        if mine == "s":
+            print("you win")
+            break
+        elif mine == "g":
+            print("you loose")
+            break
+        elif mine == "w":
+            print("draw")
+            break
+    elif comp == "gun":
+        if mine == "w":
+            print("you win")
+            break
+        elif mine == "s":
+            print("you loose ")
+            break
+        elif mine == "g":
+            print("draw")
+            break
+        i += 1
+        continue
+    print("game over")
